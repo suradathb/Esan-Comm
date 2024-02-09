@@ -9,26 +9,25 @@ services:
     ports:
       - "3306:3306"
 
+  # backend:
+  #   container_name: fastapi
+  #   build:
+  #     context: ./backend
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "8000:80"
+  #   depends_on:
+  #     - mysql
+  #   environment:
+  #     - FASTAPI_ENV=docker
 
-  backend:
-    container_name: fastapi
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
-    ports:
-      - "8000:80"
-    depends_on:
-      - mysql
-    environment:
-      - FASTAPI_ENV=docker
-
-  frontend:
-    container_name: frontend
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
+  # frontend:
+  #   container_name: frontend
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "3000:3000"
 
 volumes:
   mysql_data:

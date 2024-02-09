@@ -1,5 +1,9 @@
 fastapi
 uvicorn
 sqlalchemy
+passlib
+bcrypt
 mysql-connector-python
 mysqlclient
+authlib
+python-jose
