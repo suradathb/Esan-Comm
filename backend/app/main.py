@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from app.routers.login import authentication
+# from app.routers.login import authentication
+from app.routers   import posesaan
 from fastapi.middleware.cors import CORSMiddleware
 
 
@@ -16,6 +17,7 @@ app.add_middleware(
 )
 
 def config_router():
-        app.include_router(authentication.router)
+        # app.include_router(authentication.router)
+        app.include_router(posesaan.router)
 
 config_router()
